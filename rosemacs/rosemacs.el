@@ -828,6 +828,7 @@ parameter."
   (if (get-buffer "*roscore*")
       (switch-to-buffer (get-buffer "*roscore*"))
     (progn (start-process "roscore" (get-buffer-create "*roscore*") "roscore")
+           (switch-to-buffer (get-buffer "*roscore*"))
            (message "roscore started"))))
 
 (defun ros-set-master-uri (host port)
